@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Council — Multi-Agent Workspace</title>
+    <style>
+        :root {
+            --bg-dark: #1e2024;
+            --sidebar-bg: #16181c;
+            --card-bg: #26292e;
+            --accent-blue: #3b82f6;
+            --accent-hover: #2563eb;
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #374151;
+            --code-bg: #111827;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+        }
+
+        .download-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-box h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--accent-blue);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-download:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .file-info {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .section {
+            background-color: var(--sidebar-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+        }
+
+        li::marker {
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background-color: var(--code-bg);
+            color: #60a5fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .note {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--accent-blue);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">✦ AI Council</div>
+        <div class="subtitle">Multi-Agent Workspace for macOS</div>
+    </header>
+
+    <div class="download-box">
+        <h2>Download AI Council for Mac</h2>
+        <p style="color: var(--text-muted);">Self-contained macOS application — no Java installation required.</p>
+        
+        <a href="AI%20Council.zip" download="AI Council.zip" class="btn-download">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            Download AI Council.zip
+        </a>
+        <div class="file-info">macOS App Archive (.zip)</div>
+    </div>
+
+    <div class="section">
+        <h2>🚀 How to Install & Launch on Mac</h2>
+        <ol>
+            <li>Locate the downloaded <code>AI Council.zip</code> file in your <strong>Downloads</strong> folder.</li>
+            <li>Double-click <code>AI Council.zip</code> to extract the <strong>AI Council</strong> app.</li>
+            <li>Drag the extracted <strong>AI Council</strong> app into your <strong>Applications</strong> folder.</li>
+            <li>Double-click <strong>AI Council</strong> to open and start using the multi-agent workspace!</li>
+        </ol>
+
+        <div class="note">
+            <strong>Connecting to your local AI model:</strong> Make sure your local LM Studio server is running on your Mac (default endpoint: <code>http://localhost:1234</code>) so your agent team can send and receive responses.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
